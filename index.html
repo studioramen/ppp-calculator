@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PPP Calculator</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency and PPP Calculator</title>
+<link rel="stylesheet" href="style.css"> <!-- If you decide to add CSS -->
+<script src="app.js" defer></script>
 </head>
 <body>
-    <div id="ppp-calculator">
-        <h2>PPP Calculator</h2>
-        <label for="base-country">Base Country:</label>
-        <select id="base-country">
-            <option value="United States">USA</option>
-            <option value="United Kingdom">UK</option>
-            <option value="India">India</option>
-            <option value="Mexico">Mexico</option>
-        </select>
-        <label for="target-country">Target Country:</label>
-        <select id="target-country">
-            <option value="United States">USA</option>
-            <option value="United Kingdom">UK</option>
-            <option value="India">India</option>
-            <option value="Mexico">Mexico</option>
-        </select>
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" placeholder="Enter amount">
-        <button id="convert">Convert</button>
-        <div id="result"></div>
-    </div>
-    <script src="script.js"></script>
+<h1>Currency and PPP Calculator</h1>
+<div>
+  <label for="base-country">Base Country:</label>
+  <select id="base-country">
+    <!-- Options will be populated by JS -->
+  </select>
+</div>
+<div>
+  <label for="target-country">Target Country:</label>
+  <select id="target-country">
+    <!-- Options will be populated by JS -->
+  </select>
+</div>
+<div>
+  <label for="amount">Amount:</label>
+  <input type="number" id="amount" placeholder="Enter amount" />
+</div>
+<button id="calculate">Calculate</button>
+<div id="result"></div>
 </body>
 </html>
