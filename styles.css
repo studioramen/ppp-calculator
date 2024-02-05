@@ -8,8 +8,8 @@ body {
 
 /* Header styling */
 header {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
   padding: 10px 0;
   text-align: center;
 }
