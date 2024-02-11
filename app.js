@@ -48,9 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
           // Then convert that PPP-adjusted amount to the target currency using the exchange rate
           let adjustedValueInTargetCurrency = pppAdjustedAmountInBaseCurrency * conversionData.exchange_rate;
 
+          // Calculate the amount in the local currency by dividing the adjusted value in the target currency by the exchange rate from base to target currency
+          let adjustedValueInLocalCurrency = adjustedValueInTargetCurrency / conversionData.exchange_rate;
+
           resultDiv.innerHTML = `
               <p>PPP Rate: ${conversionData.ppp_score}</p>
               <p>Adjusted Value: ${adjustedValueInTargetCurrency.toFixed(2)} ${conversionData.target_currency}</p>
+              <p>Adjusted Value in Local Currency: ${adjustedValueInLocalCurrency.toFixed(2)} ${conversionData.base_currency}</p>
           `;
       } else {
           resultDiv.innerHTML = 'Please ensure all fields are filled correctly.';
